@@ -48,14 +48,14 @@
     "redux-thunk": "^2.2.0",
     "sodium": "^2.0.1",
     "superagent": "^3.5.2",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-livereload-plugin": "^0.11.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",
     "nodemon": "^1.11.0",
     "sqlite3": "^3.1.8",
-    "supertest": "^2.0.1",
-    "webpack-livereload-plugin": "^0.11.0"
+    "supertest": "^2.0.1"
   },
   "ava": {
     "require": [
