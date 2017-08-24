@@ -59,7 +59,7 @@ class RegisterForm extends Component {
         <p><input name= 'email' placeholder='E-mail'
           onChange={this.handleChange} value={email} /></p>
 
-        <p><input name = 'phone' placeholder='Contact Number'
+        <p><input name= 'phone' placeholder='Contact Number'
             onChange={this.handleChange} value={phone} /></p>
 
         <p><input type='password' name='password' placeholder='Password'
