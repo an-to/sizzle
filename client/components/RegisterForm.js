@@ -1,3 +1,6 @@
+//name, email and phone
+
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
@@ -10,6 +13,10 @@ class RegisterForm extends Component {
     super(props)
     this.state = {
       username: '',
+      name: '',
+      address: '',
+      email: '',
+      phone: '',
       password: '',
       confirm: ''
     }
@@ -37,11 +44,23 @@ class RegisterForm extends Component {
   }
 
   render () {
-    const { username, password, confirm } = this.state
+    const { username, name, address, email, phone, password, confirm } = this.state
     return (
       <div>
         <p><input name='username' placeholder='Username'
           onChange={this.handleChange} value={username} /></p>
+
+        <p><input name= 'name' placeholder='First Name, Last Name'
+          onChange={this.handleChange} value={name} /></p>
+
+        <p><input name= 'address' placeholder='Address'
+          onChange={this.handleChange} value={address} /></p>
+
+        <p><input name= 'email' placeholder='E-mail'
+          onChange={this.handleChange} value={email} /></p>
+
+        <p><input name = 'phone' placeholder='Contact Number'
+            onChange={this.handleChange} value={phone} /></p>
 
         <p><input type='password' name='password' placeholder='Password'
           onChange={this.handleChange} value={password} /></p>
