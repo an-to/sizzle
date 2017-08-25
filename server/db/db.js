@@ -1,12 +1,12 @@
-const getUsers = (db) => {
-  return db('users')
+const getIngredients = (db) => {
+  return db('ingredients')
   .select('*')
 }
-const saveUser = (db, user) => {
-  return db('users')
-  .insert(user)
+const saveIngredients = (db, ingredient) => {
+  return db('ingredients')
+  .insert(ingredients)
 }
 module.exports = {
-  getUsers,
-  saveUser
+  getIngredients,
+  saveIngredients
 }
