@@ -1,16 +1,17 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Quote from './Quote'
-import Logo  from './Logo'
+import Logo from './Logo'
+import Info from './Info'
 
 const App = () => {
   return (
     <div>
-      <h1>Quotes</h1>
-      <Logo />
-      <Navbar />
+      <Logo/>
+      <Info/>
+      <Navbar/>
       <div className='quote'>
-        <Quote />
+        <Quote/>
       </div>
     </div>
   )
