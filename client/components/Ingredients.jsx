@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import {getIngredients} from '../actions/ingredients'
 
 class Ingredients extends React.Component {
   constructor(props) {
@@ -9,9 +10,9 @@ class Ingredients extends React.Component {
       search: ''
     }
   }
-  // componentDidMount() {
-  //   this.props.dispatch(getIngredients())
-  // }
+  componentDidMount() {
+    this.props.dispatch(getIngredients())
+  }
   selectIngredient(ingredient) {
     this.setState({search: ingredient})
   }
@@ -23,12 +24,13 @@ class Ingredients extends React.Component {
 
 render() {
   let {search} = this.state
-  // let {ingredients} = this.
-  let ingredients = [
-    {ingredient: 'Meat'}
-  ]
-  let filteredIngredients = ingredients.filter(({ingredient}) => ingredient.toLowerCase().includes(search.toLowerCase()) && ingredient != search)
-  console.log({ingredients, filteredIngredients});
+  let {ingredients} = this.props
+  // let ingredients = [
+  //   {ingredient: 'Meat'}
+  // ]
+
+
+  let filteredIngredients =  ingredients.filter(({ingredient}) => ingredient.toLowerCase().includes(search.toLowerCase()) && ingredient != search)
   return (
     <div className='form-group'>
         <input type='text' className="form-control" name='search' value={search} onChange={this.updateSearch.bind(this)}/>
@@ -42,6 +44,9 @@ render() {
   )
  }
 }
+function matchStateToProps(state) {
 
+  return {ingredients: state.ingredients}
+}
 
-export default Ingredients
+export default connect(matchStateToProps)(Ingredients)

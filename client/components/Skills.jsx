@@ -26,7 +26,7 @@ render() {
   // let {skills} = this.props
   let skills = []
   let filteredSkills = skills.filter(skill => skill.toLowerCase().includes(search.toLowerCase()) && skill != search)
-  console.log({skills, filteredSkills});
+
   return (
     <div className='form-group'>
         <input type='text' className="form-control" name='search' value={search} onChange={this.updateSearch.bind(this)}/>

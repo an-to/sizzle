@@ -13,7 +13,7 @@ module.exports = {
 function createNewUser(newUser, testDb) {
   const hash = crypto.getHash(newUser.password)
   const connection = testDb || knex
-  console.log('newUser', newUser);
+
 
   return connection('users')
     .insert({
