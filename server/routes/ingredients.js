@@ -2,11 +2,13 @@ const express = require('express')
 const router = express.Router()
 const getIngredientsDb = require('../db/db')
 const saveIngredientsDb = require('../db/db')
+const config = require('../../knexfile')[process.env.NODE_ENV || 'development']
+const knex = require('knex')(config)
 
 
 router.get('/', (req, res) => {
-  let db =req.app.get('db')
-  getIngredientsDb.getIngredients('db')
+  const connection = knex
+  getIngredientsDb.getIngredients(connection)
     .then(ingredients => {
       res.json(ingredients)
     })
@@ -14,8 +16,8 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
 
-  let db = req.app.get('db')
-  saveIngredientsDb.saveIngredients(db, req.body)
+  const connection = knex
+  saveIngredientsDb.saveIngredients(connection, req.body)
     .then(ingredients => {
       res.send(ingredients)
     })

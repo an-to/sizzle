@@ -23,14 +23,17 @@ class Ingredients extends React.Component {
 
 render() {
   let {search} = this.state
-  let {ingredients} = this.props
-  let filteredIngredients = ingredients.filter(ingredient => ingredient.toLowerCase().includes(search.toLowerCase()) && ingredient != search)
+  // let {ingredients} = this.
+  let ingredients = [
+    {ingredient: 'Meat'}
+  ]
+  let filteredIngredients = ingredients.filter(({ingredient}) => ingredient.toLowerCase().includes(search.toLowerCase()) && ingredient != search)
   console.log({ingredients, filteredIngredients});
   return (
     <div className='form-group'>
         <input type='text' className="form-control" name='search' value={search} onChange={this.updateSearch.bind(this)}/>
-        {((filteredIngredients.length != 0 && filteredIngredients.length != ingredients.length)|| ingredients.find(ingredient => ingredient == search))
-        && filteredIngredients.map((ingredient, i) => (
+        {((filteredIngredients.length != 0 && filteredIngredients.length != ingredients.length)|| ingredients.find(({ingredient}) => ingredient == search))
+        && filteredIngredients.map(({ingredient}, i) => (
           <p onClick={() => this.selectIngredient(ingredient)} key={i}>{ingredient}</p>
         ))
       }
