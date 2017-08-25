@@ -3,17 +3,21 @@ import Navbar from './Navbar'
 import Quote from './Quote'
 import Logo from './Logo'
 import Info from './Info'
+// import DataEntryPage from './DataEntryPage'
 
 const App = () => {
   return (
-    <div>
-      <Logo/>
-      <Info/>
-      <Navbar/>
-      <div className='quote'>
-        <Quote/>
+
+      <div>
+        <Logo/>
+        <Info/>
+        <Navbar/>
+        <div className='quote'>
+          <Quote/>
+        </div>
+        
       </div>
-    </div>
+
   )
 }
 
