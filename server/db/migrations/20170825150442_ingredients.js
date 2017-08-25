@@ -1,7 +1,6 @@
 exports.up = knex => knex.schema.createTable('ingredients', table => {
-table.string('ingredient')
+  table.increments('id').primary()
+  table.string('ingredient')
 });
 
-exports.down = function(knex, Promise) {
-
-};
+exports.down = knex => knex.schema.dropTable('ingredients')
