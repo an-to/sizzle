@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Logo from './components/Logo'
-import Ingredients from './components/Ingredients'
+import Logo from '../components/Logo'
+import Ingredients from '../components/Ingredients'
 
 export default class DataEntryPage extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ export default class DataEntryPage extends React.Component {
     return (
       <div>
         <Logo />
-        <Ingredient />
+        <Ingredients ingredients={['meat', 'apple', 'milk']} />
       </div>
     )
   }
