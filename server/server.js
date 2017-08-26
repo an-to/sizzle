@@ -9,6 +9,14 @@ const usersRoute = require('./routes/users')
 
 const server = express()
 
+// force SSL
+server.use(function(req, res, next) {
+  if(process.env.NODE_ENV === 'production' && req.headers['x-forwarded-proto']==='http') {
+    return res.redirect(['https://', req.get('Host'), req.url].join(''))
+  }
+  next()
+})
+
 server.use(express.static('public'))
 server.use(passport.initialize())
 
