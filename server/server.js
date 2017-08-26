@@ -27,11 +27,8 @@ server.use(passport.initialize())
 
 server.use('/api/v1/', apiRoutes)
 server.use('/api/v1/ingredients', ingredientsRoute)
-
-
 server.use('/api/v1/locations', locationsRoute)
 server.use('/api/v1/skills', skillsRoute)
-
 
 passport.use(new LocalStrategy(auth.verify))
 

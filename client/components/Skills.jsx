@@ -26,6 +26,7 @@ render() {
   let {search} = this.state
   let {skills} = this.props
   //let skills = []
+  console.log('eeeerrrr', skills)
   let filteredSkills = skills.filter(({skill}) => skill.toLowerCase().includes(search.toLowerCase()) && skill != search)
 
   return (
@@ -41,7 +42,6 @@ render() {
  }
 }
 function matchStateToProps(state) {
-
   return {skills: state.skills}
 }
 
