@@ -6,7 +6,10 @@ const LocalStrategy = require('passport-local')
 const auth = require('./lib/auth')
 const apiRoutes = require('./routes/api')
 const ingredientsRoute = require('./routes/ingredients')
+<<<<<<< HEAD
 const locationsRoute = require('./routes/locations')
+=======
+>>>>>>> e6ef49142bdda18396d503cf6e05d5223b61fec1
 const skillsRoute = require('./routes/skills')
 
 const server = express()
@@ -24,8 +27,12 @@ server.use(passport.initialize())
 
 server.use('/api/v1/', apiRoutes)
 server.use('/api/v1/ingredients', ingredientsRoute)
+<<<<<<< HEAD
 server.use('/api/v1/locations', locationsRoute)
 server.use('/api/v1/skills', skillsRoute)
+=======
+server.use('api/v1/skills', skillsRoute)
+>>>>>>> e6ef49142bdda18396d503cf6e05d5223b61fec1
 
 passport.use(new LocalStrategy(auth.verify))
 
