@@ -27,15 +27,9 @@ class Locations extends React.Component {
     this.setState({showOptions: !this.state.showOptions, search: ''})
   }
 
-    //e.preventDefault()
-
 render() {
   let {search, showOptions} = this.state
   let {locations} = this.props
-  // let locations = [
-  //   {location: 'Meat'}
-  // ]
-  console.log({locations, search})
 
   const filterFunction = (location) => {
     let {facility, address} = location
