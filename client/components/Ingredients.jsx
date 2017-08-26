@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import {getIngredients} from '../actions/ingredients'
 
 class Ingredients extends React.Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -38,12 +39,13 @@ render() {
           <p onClick={() => this.selectIngredient(ingredient)} key={i}>{ingredient}</p>
         ))
       }
+      <Link to='/'>home</Link>
     </div>
   )
  }
 }
-function matchStateToProps(state) {
 
+function matchStateToProps(state) {
   return {ingredients: state.ingredients}
 }
 

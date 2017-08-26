@@ -5,12 +5,11 @@ import Logo from './Logo'
 import Info from './Info'
 import DataEntryPage from '../container/DataEntryPage'
 import {HashRouter as Router, Route} from 'react-router-dom'
-// import DataEntryPage from './DataEntryPage'
+
 
 const App = () => {
   return (
     <Router>
-
       <div>
         <Route exact path='/data' component={DataEntryPage}/>
         <Logo/>
@@ -19,7 +18,6 @@ const App = () => {
         <div className='quote'>
           <Quote/>
         </div>
-
       </div>
       </Router>
   )
