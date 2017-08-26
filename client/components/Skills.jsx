@@ -13,7 +13,7 @@ class Skills extends React.Component {
   componentDidMount() {
     this.props.dispatch(getSkills())
   }
-  selectSkills(skills) {
+  selectSkills(skill) {
     this.setState({search: skill})
   }
   updateSearch(e) {
