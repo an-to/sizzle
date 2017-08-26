@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Logo from '../components/Logo'
 import Ingredients from '../components/Ingredients'
 import Skills from '../components/Skills'
+import Locations from '../components/Locations'
 
 export default class DataEntryPage extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ export default class DataEntryPage extends React.Component {
         <Logo />
         <Ingredients />
         <Skills />
+        <Locations />
       </div>
     )
   }
