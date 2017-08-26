@@ -4,22 +4,29 @@ const knex = require('knex')(config)
 const crypto = require('./crypto')
 
 module.exports = {
-  create,
+  //create,
   exists,
   getById,
   getByName,
+  createNewUser
 }
-
-function create (username, password, testDb) {
-  const hash = crypto.getHash(password)
+function createNewUser(newUser, testDb) {
+  const hash = crypto.getHash(newUser.password)
   const connection = testDb || knex
+
 
   return connection('users')
     .insert({
-      username: username,
-      hash: hash
+        username: newUser.username,
+        name: newUser.name,
+        address: newUser.address,
+        email: newUser.email,
+        phone: newUser.phone,
+        hash: hash
     })
+
 }
+
 
 function exists (username, testDb) {
   const connection = testDb || knex

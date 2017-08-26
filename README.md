@@ -1,6 +1,6 @@
-# React/Redux client consuming an Express server with Passport local auth using JWTs
+# Sizzle
 
-This demonstrates a fairly minimal username/password auth scenario that makes use of libsodium/Argon2i password hashing. There's also a tiny API to show how JWTs might be used to secure it.
+Resource sharing website to reduce waste
 
 
 ## Setup
@@ -10,10 +10,14 @@ npm i
 mv .env.example .env
 npm start
 ```
-
 * A `postinstall` script will run a knex migration that creates a `users` table.
 * Go to [http://localhost:3000](http://localhost:3000) to see the site.
 
+## Setup on Heroku
+```shell
+heroku run config:set SESSION_SECRET=<your session secret>
+heroku run config:set JWT_SECRET=<your jwt secret>
+```
 
 ## Deploying to Heroku
 
