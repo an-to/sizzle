@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import {getSkills} from '../actions/skills'
 
 class Skills extends React.Component {
   constructor(props) {
@@ -9,9 +10,9 @@ class Skills extends React.Component {
       search: ''
     }
   }
-  // componentDidMount() {
-  //   this.props.dispatch(getIngredients())
-  // }
+  componentDidMount() {
+    this.props.dispatch(getSkills())
+  }
   selectSkills(skills) {
     this.setState({search: skill})
   }
@@ -23,23 +24,25 @@ class Skills extends React.Component {
 
 render() {
   let {search} = this.state
-  // let {skills} = this.props
-  let skills = []
-  let filteredSkills = skills.filter(skill => skill.toLowerCase().includes(search.toLowerCase()) && skill != search)
+  let {skills} = this.props
+  //let skills = []
+  let filteredSkills = skills.filter(({skill}) => skill.toLowerCase().includes(search.toLowerCase()) && skill != search)
 
   return (
     <div className='form-group'>
-        <input type='text' className="form-control" name='search' value={search} onChange={this.updateSearch.bind(this)}/>
-        {((filteredSkills.length != 0 && filteredSkills.length != skills.length)|| skills.find(skill => skill == search))
-        && filteredSkills.map((skill, i) => (
+        <input type='text' className="form-control" name='search' placeholder='Skill' value={search} onChange={this.updateSearch.bind(this)}/>
+        {((filteredSkills.length != 0 && filteredSkills.length != skills.length)|| skills.find(({skill}) => skill == search))
+        && filteredSkills.map(({skill}, i) => (
           <p onClick={() => this.selectSkills(skill)} key={i}>{skill}</p>
         ))
       }
-      <Link to="/">Go Home</Link>
     </div>
   )
  }
 }
+function matchStateToProps(state) {
 
+  return {skills: state.skills}
+}
 
-export default Skills
+export default connect(matchStateToProps)(Skills)
