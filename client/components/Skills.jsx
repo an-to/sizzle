@@ -30,7 +30,6 @@ render() {
   let {search, showOptions} = this.state
   let {skills} = this.props
 
-  console.log('eeeerrrr', skills)
   let filteredSkills = skills.filter(({skill}) => skill.toLowerCase().includes(search.toLowerCase()) && skill != search)
 
   return (
