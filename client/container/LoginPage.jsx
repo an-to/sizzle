@@ -18,6 +18,9 @@ export default class LoginPage extends React.Component {
       <div>
         <Logo />
         <Info />
+        <Link to='/'>
+           <button type="button" className="btn btn-primary">Home</button>
+         </Link>
       </div>
     )
   }
