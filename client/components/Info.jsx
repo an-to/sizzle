@@ -2,9 +2,9 @@ import React from 'react'
 import {Grid,Row,Col,Input,Container} from 'react-bootstrap'
 import jump from 'jump.js'
 
-  const Info = () => {
-    return (
-      <div>
+const Info = () => {
+  return (
+    <div>
 
         <Grid  className="Info">
           <Row>
@@ -22,16 +22,15 @@ import jump from 'jump.js'
                 really be the choice of you. We are grateful for your
                 help in avoiding food waste, thank you.</p>
 
-                <p>Love,</p>
+            <p>Love,</p>
+            <p>Team Sizzle.</p>
+            </div>
+          </Col>
+          <Col xs={1} md={4}></Col>
+        </Row>
+      </Grid>
 
-                  <p>Team Sizzle.</p>
-                  </div>
-            </Col>
-            <Col xs={1} md={4}></Col>
-          </Row>
-        </Grid>
-
-      </div>
-    )
-  }
-  export default Info
+    </div>
+  )
+}
+export default Info

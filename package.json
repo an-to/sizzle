@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate-local-jwt-auth",
-  "version": "0.1.1",
-  "description": "Local Passport strategy boilerplate using libsodium and JWTs",
+  "name": "Sizzle",
+  "version": "0.0.1",
+  "description": "Resource sharing website to reduce waste",
   "main": "server/index.js",
   "scripts": {
     "dev": "nodemon --watch server & webpack --watch",
@@ -13,8 +13,8 @@
     "test": "ava --v",
     "test:watch": "ava --v --watch"
   },
-  "author": "EDA",
-  "license": "ISC",
+  "author": "SizzleDevelopers",
+  "license": "MIT",
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",

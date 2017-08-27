@@ -18,6 +18,9 @@ export default class EventPage extends React.Component {
       <div>
         <Logo />
         <Quote />
+        <Link to='/'>
+           <button type="button" className="btn btn-primary">Home</button>
+         </Link>
       </div>
     )
   }
