@@ -19,10 +19,10 @@ import {Grid,Row,Col,Input,Container} from 'react-bootstrap'
                 can choose between consuming, donating to some institution, selling, it will
                 really be the choice of you. We are grateful for your
                 help in avoiding food waste, thank you.</p>
-              <br>
+              
                 <p>Love,</p>
-                <br>
-                  Team Sizzle.
+                
+                  <p>Team Sizzle.<p>
             </Col>
             <Col xs={1} md={4}></Col>
           </Row>
