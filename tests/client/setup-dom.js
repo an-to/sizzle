@@ -8,7 +8,7 @@ const localStorage = {}
 dom.window.localStorage = {
   getItem: (key) => localStorage[key],
   setItem: (key, value) => localStorage[key] = value,
-  removeItem: (key) => {delete localStorage[value]}
+  removeItem: (key) => {delete localStorage[key]}
 }
 
 global.window = dom.window
