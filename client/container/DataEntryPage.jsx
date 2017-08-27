@@ -19,6 +19,9 @@ export default class DataEntryPage extends React.Component {
         <Ingredients />
         <Skills />
         <Locations />
+        <Link to='/'>
+           <button type="button" className="btn btn-primary">Home</button>
+         </Link>
       </div>
     )
   }

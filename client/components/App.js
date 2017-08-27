@@ -1,8 +1,8 @@
 import React from 'react'
-import Quote from './Quote'
 import Navbar from '../components/Navbar'
 import DataEntryPage from '../container/DataEntryPage'
 import LoginPage from '../container/LoginPage'
+import EventPage from '../container/EventPage'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 
@@ -12,9 +12,9 @@ const App = () => {
       <div>
         <Route exact path='/' component={LoginPage}/>
         <Route exact path='/data' component={DataEntryPage}/>
+        <Route exact path='/event' component={EventPage}/>
         <div className='quote'>
           <Navbar />
-          <Quote/>
         </div>
       </div>
       </Router>

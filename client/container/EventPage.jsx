@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Logo from '../components/Logo'
-import Info from '../components/Info'
-import Navbar from '../components/Navbar'
-import LoginForm from '../components/LoginForm'
+import Quote from '../components/Quote'
 
 
-export default class LoginPage extends React.Component {
+
+
+export default class EventPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -17,7 +17,7 @@ export default class LoginPage extends React.Component {
     return (
       <div>
         <Logo />
-        <Info />
+        <Quote />
       </div>
     )
   }
