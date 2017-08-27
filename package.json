@@ -11,7 +11,7 @@
     "postinstall": "webpack && npm run migrate",
     "start": "node server",
     "test": "ava",
-    "test:watch": "ava --watch"
+    "test:watch": "ava --v --watch"
   },
   "author": "EDA",
   "license": "ISC",
