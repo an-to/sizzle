@@ -1,16 +1,18 @@
 import React from 'react'
-import { Grid, Row, Col, Input, Container } from 'react-bootstrap'
+import {Grid,Row,Col,Input,Container} from 'react-bootstrap'
+import jump from 'jump.js'
 
 const Info = () => {
   return (
     <div>
 
-      <Grid className="Info">
-        <Row>
-          <Col xs={1} md={4}></Col>
-          <Col xs={4} md={4}>
-            <h1>Info</h1>
-            <p>Sizzle was created with the aim of encouraging people not to
+        <Grid  className="Info">
+          <Row>
+            <Col xs={1} md={4}></Col>
+            <Col xs={4} md={4}>
+              <h1>Info</h1>
+              <div className='info'>
+              <p>Sizzle was created with the aim of encouraging people not to
                 waste food and make it an action where you provide some resource
                 between food, skill or a kitchen to prepare the food that is made available.
                 You can choose to create an event and offer a resource or you can choose from
@@ -22,6 +24,7 @@ const Info = () => {
 
             <p>Love,</p>
             <p>Team Sizzle.</p>
+            </div>
           </Col>
           <Col xs={1} md={4}></Col>
         </Row>
