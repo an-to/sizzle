@@ -7,7 +7,7 @@ import store from '../../client/store'
 
 import Skills from '../../client/components/Skills'
 
-test('Skills showing', t => {
+test.only('Skills showing', t => {
   const wrapper = shallow(
     <Provider store={store}>
     <Skills />
