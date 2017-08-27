@@ -39,7 +39,7 @@ render() {
 
   return (
     <div className='form-group'>
-      <input type='text' className="form-control" name='search' value={search} onChange={this.updateSearch.bind(this)}/>
+      <input type='text' className="form-control" name='search' placeholder='location' value={search} onChange={this.updateSearch.bind(this)}/>
       <button onClick={this.toggleShowOptions.bind(this)}>{showOptions ? 'Hide' : 'Show'}</button>
         {(showOptions || (search.length != 0 && !locations.find(({location}) => location == search)))
         &&

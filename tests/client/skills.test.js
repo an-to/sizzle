@@ -8,8 +8,10 @@ import store from '../../client/store'
 import Skills from '../../client/components/Skills'
 
 test('Skills showing', t => {
-  const wrapper = shallow(<Provider store={store}>
+  const wrapper = shallow(
+    <Provider store={store}>
     <Skills />
-  </Provider>)
+    </Provider>
+)
   t.is(wrapper.find('input').exists(), true)
 })

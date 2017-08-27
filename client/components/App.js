@@ -1,9 +1,8 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Quote from './Quote'
-import Logo from './Logo'
-import Info from './Info'
+import Navbar from '../components/Navbar'
 import DataEntryPage from '../container/DataEntryPage'
+import LoginPage from '../container/LoginPage'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 
@@ -11,11 +10,10 @@ const App = () => {
   return (
     <Router>
       <div>
+        <Route exact path='/' component={LoginPage}/>
         <Route exact path='/data' component={DataEntryPage}/>
-        <Logo/>
-        <Info/>
-        <Navbar/>
         <div className='quote'>
+          <Navbar />
           <Quote/>
         </div>
       </div>
