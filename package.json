@@ -10,7 +10,7 @@
     "migrate:prod": "knex migrate:latest",
     "postinstall": "webpack && npm run migrate",
     "start": "node server",
-    "test": "ava",
+    "test": "ava --v",
     "test:watch": "ava --v --watch"
   },
   "author": "EDA",
