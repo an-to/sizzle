@@ -31,13 +31,17 @@ class RegisterForm extends Component {
   }
 
   handleClick (event) {
-    const { username, password, confirm } = this.state
+    const { username, name, address, email, phone, password, confirm, } = this.state
     if (password !== confirm) {
       this.props.registerError('Passwords do not match!')
       return
     }
     const creds = {
       username: username.trim(),
+      name: name.trim(),
+      address: address.trim(),
+      email: email.trim(),
+      phone: phone.trim(),
       password: password.trim()
     }
     this.props.registerUser(creds)
