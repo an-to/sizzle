@@ -1,25 +1,21 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Quote from './Quote'
-import Logo from './Logo'
-import Info from './Info'
+import Navbar from '../components/Navbar'
 import DataEntryPage from '../container/DataEntryPage'
+import LoginPage from '../container/LoginPage'
+import EventPage from '../container/EventPage'
 import {HashRouter as Router, Route} from 'react-router-dom'
-// import DataEntryPage from './DataEntryPage'
+
 
 const App = () => {
   return (
     <Router>
-
       <div>
+        <Route exact path='/' component={LoginPage}/>
         <Route exact path='/data' component={DataEntryPage}/>
-        <Logo/>
-        <Info/>
-        <Navbar/>
+        <Route exact path='/event' component={EventPage}/>
         <div className='quote'>
-          <Quote/>
+          <Navbar />
         </div>
-
       </div>
       </Router>
   )

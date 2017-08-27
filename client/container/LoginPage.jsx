@@ -1,11 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Logo from '../components/Logo'
-import Ingredients from '../components/Ingredients'
-import Skills from '../components/Skills'
-import Locations from '../components/Locations'
+import Info from '../components/Info'
+import Navbar from '../components/Navbar'
+import LoginForm from '../components/LoginForm'
 
-export default class DataEntryPage extends React.Component {
+
+export default class LoginPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -16,9 +17,7 @@ export default class DataEntryPage extends React.Component {
     return (
       <div>
         <Logo />
-        <Ingredients />
-        <Skills />
-        <Locations />
+        <Info />
         <Link to='/'>
            <button type="button" className="btn btn-primary">Home</button>
          </Link>
