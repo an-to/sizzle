@@ -4,11 +4,11 @@ export const recieveResource = (resources) => {
   return {type: 'GET_RESOURCE', resources}
 }
 
-export function getResource() {
+export function postResource(resource) {
   return (dispatch) => {
-    request('get','/resources')
+    request('post','/resources', resource)
     .then(res => {
-      dispatch(receiveLocations(res.body))
+      console.log(res.body)
     })
     .catch(err => console.error(err))
 
