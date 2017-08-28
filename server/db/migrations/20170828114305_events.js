@@ -3,9 +3,8 @@ exports.up = knex => knex.schema.createTable('events', table => {
   table.date('date')
   table.boolean('is_am')
   table.string('description')
-  table.integer('location_id')
-
-
+  table.string('title')
+  table.integer('user_id') // event host
 });
 
 exports.down = knex => knex.schema.dropTable('events')
