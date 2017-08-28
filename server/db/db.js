@@ -22,6 +22,10 @@ const saveIngredients = (db, ingredient) => {
   return db('ingredients')
   .insert(ingredients)
 }
+const saveResources = (db, resource) => {
+  return db('resource')
+  .insert(resource)
+}
 
 const saveSkills = (db) => {
   return db('skills')
@@ -39,5 +43,6 @@ module.exports = {
   saveIngredients,
   saveSkills,
   saveLocations,
+  saveResources,
   getLocations
 }
