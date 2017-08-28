@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Grid, Row, Col, Input, Container } from 'react-bootstrap'
-import moment from 'moment'
 
 import { createEvent } from '../actions/events'
 import Logo from '../components/Logo'
@@ -33,7 +32,6 @@ export class EventPage extends React.Component {
   }
 
   render() {
-    let dateString = moment(this.state.date).format('DD/MMM/YYYY')
     return (
       <div className='event'>
         <Logo />
