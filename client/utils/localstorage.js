@@ -1,7 +1,6 @@
 const localStorage = global.window.localStorage
 
 export function get (key) {
-  console.log(key)
   return localStorage.getItem(key)
 }
 
