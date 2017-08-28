@@ -10,7 +10,7 @@ export default  function MainPage() {
       <Link to='/'>
          <button type="button" className="btn btn-primary">Make Event</button>
        </Link>
-      <Link to='/'>
+      <Link to='/manageevent'>
          <button type="button" className="btn btn-primary">Manage Event</button>
        </Link>
       <Link to='/MakeResource'>
