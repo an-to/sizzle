@@ -1,7 +1,7 @@
 import request from '../utils/api'
 
 export const receiveEvents = (events) => {
-  return {type: 'GET_EVENTS', events}
+  return {type: 'RECEIVE_EVENTS', events}
 }
 
 export const addEvent = (event) => {
