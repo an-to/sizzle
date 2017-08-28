@@ -5,7 +5,13 @@ const config = require('../../knexfile')[process.env.NODE_ENV || 'development']
 const knex = require('knex')(config)
 
 
-
+// router.get('/', (req, res) => {
+//   const connection = knex
+//   getSkillsDb.getSkills(connection)
+//     .then(resources => {
+//       res.json(resources)
+//     })
+// })
 
 router.post('/', (req, res) => {
   const resource = req.body
@@ -18,6 +24,7 @@ router.post('/', (req, res) => {
     .catch(err => {
     })
 })
+
 
 
 module.exports = router

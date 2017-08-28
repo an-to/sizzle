@@ -16,7 +16,7 @@ export default  function MainPage() {
       <Link to='/MakeResource'>
          <button type="button" className="btn btn-primary">Make Resource</button>
        </Link>
-      <Link to='/'>
+      <Link to='/ManageResource'>
          <button type="button" className="btn btn-primary">Manage Resource</button>
        </Link>
     </div>

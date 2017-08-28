@@ -19,9 +19,9 @@ export class EventList extends React.Component {
         <Logo />
         <Grid>
           <h2>Events</h2>
-          {this.props.events.map((event) => {
+          {this.props.events.map((event) => 
             <Event event={event} />
-          })}
+          )}
         </Grid>
       </div>
     )
@@ -34,5 +34,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(EventList) 
-
+export default connect(mapStateToProps)(EventList)

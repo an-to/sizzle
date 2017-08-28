@@ -6,6 +6,7 @@ import ingredients from './ingredients'
 import skills from './skills'
 import locations from './locations'
 import events from './events'
+import resources from './resources'
 
 const reducers = combineReducers({
   auth,
@@ -13,7 +14,8 @@ const reducers = combineReducers({
   ingredients,
   skills,
   locations,
-  events
+  events,
+  resources
 })
 
 export default reducers
