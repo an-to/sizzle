@@ -17,6 +17,7 @@ class DataEntryPage extends React.Component {
       kg:null
     }
   }
+
   handleSave(e) {
     let exampleState = {
       ingrendient_id: 3,
@@ -26,13 +27,14 @@ class DataEntryPage extends React.Component {
     this.props.dispatch(postAttendance(this.state))
     //dispatch an action
   }
+
   render() {
     return (
       <div>
         <Logo />
         <Ingredients onSelect={(ingredient_id) => this.setState({ingredient_id})}/>
-        <Skills />
-        <Locations />
+        <Skills onSelect={(skill_id) => this.setState({skill_id})}/>
+        <Locations onSelect={(location_id) => this.setState({location_id})}/>
         <button onClick={this.handleSave.bind(this)}>save</button>
         <Link to='/'>
            <button type="button" className="btn btn-primary">Home</button>
