@@ -4,10 +4,10 @@ const app = require('../../server/server')
 const setupDb = require('./setup-db')
 
 
-setupDb(test, createServer)
+setupDb(test, app)
 
 test.cb('Authenticate complains about no credentials', t => {
-  request(app)
+  request(t.context.app)
     .get('/api/v1/ingredients')
     .send({})
     .expect(200)
