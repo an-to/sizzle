@@ -2,13 +2,9 @@ import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Navbar from '../components/Navbar'
-// import DataEntryPage from '../container/DataEntryPage'
 import LoginPage from '../container/LoginPage'
-
-// import EventPage from '../container/EventPage'
 import MainPage from './MainPage'
 import MakeResource from './MakeResource'
-
 import EventPage from '../container/EventPage'
 import EventList from '../container/EventList'
 
@@ -19,10 +15,8 @@ const App = () => {
     <Router>
       <div>
         <Route exact path='/' component={LoginPage}/>
-
         <Route exact path='/' component={MainPage}/>
         <Route exact path='/MakeResource' component={MakeResource}/>
-
         <Route exact path='/event' component={EventPage}/>
         <Route exact path='/eventlist' component={EventList}/>
         <div className='quote'>
