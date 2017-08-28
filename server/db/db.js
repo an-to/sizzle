@@ -2,6 +2,12 @@ const getIngredients = (db) => {
   return db('ingredients')
   .select('*')
 }
+
+const getIngredientsByUser = (db, user) => {
+  return db('users')
+  .join('ingredients', 'user_id', 'user.id')
+}
+
 const getSkills = (db) => {
   return db('skills')
   .select('*')

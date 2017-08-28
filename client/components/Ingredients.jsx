@@ -15,8 +15,10 @@ class Ingredients extends React.Component {
   componentDidMount() {
     this.props.dispatch(getIngredients())
   }
-  selectIngredient(ingredient) {
-    this.setState({search: ingredient})
+  selectIngredient(ingredientName) {
+    const ingredient = this.props.ingredients.find((ingredient) => ingredient.ingredient == ingredientName)
+    this.props.onSelect(ingredient.id)
+    this.setState({search: ingredientName})
   }
   updateSearch(e) {
     let showOptions = true
