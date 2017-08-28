@@ -1,4 +1,4 @@
-exports.up = knex => knex.schema.createTable('resource', table => {
+exports.up = knex => knex.schema.createTable('resources', table => {
   table.increments('id').primary()
   table.string('title')
   table.string('type')
@@ -8,4 +8,4 @@ exports.up = knex => knex.schema.createTable('resource', table => {
 
 });
 
-exports.down = knex => knex.schema.dropTable('resource')
+exports.down = knex => knex.schema.dropTable('resources')
