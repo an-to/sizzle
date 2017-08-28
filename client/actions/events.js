@@ -24,8 +24,7 @@ export function getEvents() {
 
 export function createEvent(event) {
   return (dispatch) => {
-    request('post','/events')
-    .send(event)
+    request('post','/events', event)
     .then(res => {
       dispatch(addEvent(res.body))
     })
@@ -36,7 +35,6 @@ export function createEvent(event) {
 export function removeEvent(event) {
   return (dispatch) => {
     request('delete',`/events/${event.id}`)
-    .send(event)
     .then(res => {
       dispatch(removeEvent(res.body))
     })
